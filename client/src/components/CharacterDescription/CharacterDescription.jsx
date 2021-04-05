@@ -9,10 +9,11 @@ import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 import Collapse from '@material-ui/core/Collapse';
 import List from '@material-ui/core/List';
-import { capitalize, calculateAge } from '../../utils';
+import { calculateAge, capitalize } from '../../utils';
 import InfoIcon from '@material-ui/icons/Info';
 import Grid from '@material-ui/core/Grid';
 import uuid from 'react-uuid';
+import PropTypes from 'prop-types';
 
 const useStyles = makeStyles(theme => ({
   nested: {
@@ -97,3 +98,11 @@ const CharacterDescription = ({ name, gender, birth_year, height, films, ...rest
 };
 
 export default CharacterDescription;
+
+CharacterDescription.propTypes = {
+  name: PropTypes.string.isRequired,
+  gender: PropTypes.string.isRequired,
+  birth_year: PropTypes.string.isRequired,
+  height: PropTypes.string.isRequired,
+  films: PropTypes.array.isRequired,
+};

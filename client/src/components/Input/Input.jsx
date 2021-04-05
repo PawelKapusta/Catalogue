@@ -37,3 +37,7 @@ const Input = ({ isLoading, onChange, ...restProps }) => {
 };
 
 export default Input;
+
+Input.propTypes = {
+  isLoading: PropTypes.boolean.isRequired,
+};

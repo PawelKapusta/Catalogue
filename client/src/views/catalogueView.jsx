@@ -33,18 +33,17 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const getFilmId = string => parseInt(string.substring(27, string.lastIndexOf('/')));
-console.log(getFilmId('https://swapi.dev/api/films/1/'))
 
 const CatalogueView = () => {
   const classes = useStyles();
   const { characters, loading: charactersLoading, error: charactersError } = useSelector(
     state => state.charactersList,
   );
-
   const { films, filmLoading, error: filmsError } = useSelector(state => state.filmsList);
   const dispatch = useDispatch();
   const [pageNumber, setPageNumber] = useState(1);
   const [hasMore, setHasMore] = useState(true);
+
   useEffect(() => {
     dispatch(listCharacters(pageNumber));
   }, [pageNumber]);

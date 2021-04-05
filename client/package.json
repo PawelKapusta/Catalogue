@@ -44,6 +44,7 @@
   "devDependencies": {
     "@material-ui/icons": "^4.11.2",
     "prettier": "2.2.1",
+    "prop-types": "^15.7.2",
     "react-redux": "^7.2.3",
     "uuidv4": "^6.2.7"
   }
